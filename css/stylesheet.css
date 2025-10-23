@@ -1,0 +1,133 @@
+.grid-container {
+    display: grid;
+    gap: 20px 30px;
+    grid-template-areas: 
+    'Daniel Daniel Jonathan Kira'
+    'Jeanette Patrick Patrick Kira';
+    background-color:hsl(214, 17%, 92%);
+    justify-content: center;
+    align-content: center;
+    padding: 150px 100px;
+    max-width: 1440px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-style: normal;
+    font-size: 13px;
+}
+.grid-container>div {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    padding: 20px;
+    margin: 0;
+    border-radius: 15px;
+    box-shadow: 20px 30px hsl(214, 14%, 90%);
+}
+.profile {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+.image-container {
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+    overflow: hidden;
+}
+.profile-image {
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 1px 0 0 0;
+}
+.description {
+    margin: 0;
+}
+.name {
+    font-size: 13px;
+    margin: 0;
+    text-align: left;
+}
+.graduate {
+    margin: 2px 0 0 0;
+    text-align: left;
+}
+.name .objective {
+    font-weight: 600;
+}
+.graduate, blockquote {
+    font-weight: 500;
+    opacity: 0.8;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.bold {
+    font-weight: 600;
+}
+.medium {
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+blockquote {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.item1 {
+    grid-area: Daniel;
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%);
+    position: relative;
+    z-index: 1;
+}
+.item2 {
+    grid-area: Jonathan;
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+}
+.item3 {
+    grid-area: Jeanette;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+}
+.item4 {
+    grid-area: Patrick;
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
+}
+.item5 {
+    grid-area: Kira;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+}
+.item1 .profile-image {
+    border: 3px solid hsl(264, 82%, 80%);
+} 
+
+.item2 .profile-image {
+    border: 3px solid hsl(224, 10%, 45%);
+}
+
+.item4 .profile-image {
+    border: 3px solid hsl(264, 82%, 80%);
+}
+.item1 .quote {
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    right: 50px;
+}
