@@ -1,31 +1,39 @@
-.grid-container {
-        display: grid;
-        gap: 20px;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        'Daniel'
-        'Jonathan' 
-        'Jeanette' 
-        'Patrick' 
-        'Kira';
-        background-color:hsl(214, 17%, 92%);
-        justify-content: center;
-        align-content: center;
-        padding: 80px 50px;
-        margin: 0;
-        max-width: none;
-        box-sizing: border-box;
-        overflow: hidden;
-        font-family: "Barlow Semi Condensed", sans-serif;
-        font-style: normal;
-        font-size: 13px;
+@media screen and (max-width:1023px) {
+    .grid-container {
+            display: grid;
+            gap: 20px;
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            'Daniel'
+            'Jonathan' 
+            'Jeanette' 
+            'Patrick' 
+            'Kira';
+            background-color:hsl(214, 17%, 92%);
+            justify-content: center;
+            align-content: center;
+            padding: 80px 50px;
+            margin: 0;
+            max-width: none;
+            box-sizing: border-box;
+            overflow: hidden;
+            font-family: "Barlow Semi Condensed", sans-serif;
+            font-style: normal;
+            font-size: 13px;
+    }
+    .item1 .quote {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    }
 }
-
 @media screen and (min-width: 1024px) {
     .grid-container {
         display: grid;
         gap: 20px 30px;
-        max-width: 1440px;
+        max-width: none;
+        width: 100%;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
         'Daniel Daniel Jonathan Kira'
@@ -41,6 +49,14 @@
         font-style: normal;
         font-size: 13px;
     } 
+    .item1 .quote {
+        display: block;   
+        position: absolute;
+        z-index: -1;
+        top: 0px;
+        right: 50px;
+        max-width: 85px;
+    }
 }
 .grid-container>div {
     position: relative;
@@ -98,8 +114,13 @@
     opacity: 0.7;
 }
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     background-color:hsl(214, 17%, 92%);
 }
 
 blockquote {
@@ -146,11 +167,4 @@ blockquote {
 
 .item4 .profile-image {
     border: 3px solid hsl(264, 82%, 80%);
-}
-.item1 .quote {
-    position: absolute;
-    z-index: -1;
-    top: 0px;
-    right: 50px;
-    width: 85px;
 }
